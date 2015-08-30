@@ -6,11 +6,13 @@ $pdo = new PDO(
     [PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8']
 );
 
-$data = $pdo->query("SELECT mail FROM mail ORDER BY mail ASC;")->fetchAll();
-
-$jsArray = 'var mails = [' . PHP_EOL;
-foreach ($data as $row) {
-    $jsArray .= '"' . reset($row) . '",' . PHP_EOL;
+$offset = 0;
+while (count($data = $pdo->query("SELECT mail FROM mail ORDER BY id ASC LIMIT 50 OFFSET " . ($offset * 50) . ";")->fetchAll()) > 0) {
+    $jsArray = 'var mails = [' . PHP_EOL;
+    foreach ($data as $row) {
+        $jsArray .= '"' . $row['mail'] . '",' . PHP_EOL;
+    }
+    $jsArray .= '];';
+    file_put_contents(__DIR__ . '/spamlist' . $offset . '.txt', $jsArray);
+    $offset++;
 }
-$jsArray .= '];';
-file_put_contents(__DIR__ . '/spamlist.txt', $jsArray);
