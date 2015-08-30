@@ -15,42 +15,9 @@ window.open(mainIframe.src, '_blank');
 * Führe folgendes Script aus:
 ```
 var mails = [
-"akb80@web.de",
-"alexbru@web.de",
-"andrea.rosengarten@web.de",
-"anett.fetzer@web.de",
-"bad.meets.evil@web.de",
 "connydo@web.de",
-"danielutsch@web.de",
-"enrico_d@web.de",
-"ernst-winkler@web.de",
-"fkross_berlin@web.de",
-"franke.gronau@web.de",
-"gesche_peters@web.de",
-"h.egerland@web.de",
-"heidrek@web.de",
-"heinrichs.florian@web.de",
-"hestehale@web.de",
-"holgrad@web.de",
-"jan.phenn@web.de",
-"janetspepe@web.de",
-"jasmin-frost@web.de",
-"jens.lehmker@web.de",
-"juliana.monteiro@web.de",
 "masselback@web.de",
-"meier.isabel@web.de",
-"nadine.drescher@web.de",
-"olgitsa@web.de",
-"philipbvb@web.de",
-"ronja.hirschfeld@web.de",
-"schnuranette@web.de",
-"silke.menning@web.de",
-"smdohrmann@web.de",
-"sylvia-schmid@web.de",
-"tanzfee1983@web.de",
-"winkler.pia@web.de",
-"wsogmbh@web.de",
-"veraeckardt@web.de"
+"olgitsa@web.de"
 ];
 
 function addMailsToFilterRulesWindow(mailsToAdd) {
